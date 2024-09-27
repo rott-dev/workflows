@@ -1,0 +1,22 @@
+name: Rott
+
+on:
+  workflow_call:
+    secrets:
+      shared_rules_token:
+        required: true
+      rott_token:
+        required: true
+
+jobs:
+  publish:
+    name: Rott.dev
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Rott-dev
+        uses: rott-dev/action@v1.3.0
+        with:
+          github_token: ${{ secrets.shared_rules_token }}
+          rott_token: ${{ secrets.rott_token }}
