@@ -16,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Rott-dev
-        uses: rott-dev/action@v1.3.0
+        uses: rott-dev/action@v1.3.1
         with:
           github_token: ${{ secrets.shared_rules_token }}
           rott_token: ${{ secrets.rott_token }}
